@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap.css" rel="stylesheet" />
+    <title>MY TODO LIST!</title>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1 id="pageTitle">My Todo List</h1>
+        <h6>Created by Rohit Sangaraju &copy; 2017</h6>
+    </div>
+    <div>
+        <table class="table">
+            <tr>
+                <td>
+                    <div>
+                        <button class="buttons" onclick="handlers.toggleAll() "> Toggle All </button>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <button class="buttons" onclick="handlers.addTodo()">Add Todo</button>
+                        <input id="addTodoTextInput" type="text">
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <button class="buttons " onclick="handlers.changeTodo()">Change Todo</button>
+                        <input id="changeTodoPosition" type="number">
+                        <input id="changeTodoText" type="text">
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <button class="buttons " onclick="handlers.toggleCompleted()">Toggle Todo</button>
+                        <input id="togglePosition" type="number">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <br> <br>
+
+    <div id="ulContainer">
+        <ul id="unList"></ul>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
