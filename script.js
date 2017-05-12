@@ -32,13 +32,13 @@
     },
     toggleCompleted: function (position) {
         var todo = this.todos[position];
-        todo.completed = !todo.completed;
+            todo.completed = !todo.completed;
     }
 
 };
 
 
-var handlers = {
+var handlers = {    
 
     toggleAll: function () {
         TodoList.toggleAll();
@@ -99,18 +99,23 @@ var view = {
     }
 };
 
-var todosUl = document.querySelector('ul');
+window.onload = function () {
+    var todosUl = document.querySelector('ul');
 
-todosUl.addEventListener('click', function (event) {
-    var elementClicked = event.target;
-    if (elementClicked.className === "deleteButton") {
-        handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
-    }
-    if (elementClicked.className === "listitem") {
-        handlers.toggleCompleted(parseInt(elementClicked.id));
-    }
+    todosUl.addEventListener('click', function (event) {
+        var elementClicked = event.target;
+        if (elementClicked.className === "deleteButton") {
+            handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+        }
+        if (elementClicked.className === "listitem") {
+            handlers.toggleCompleted(parseInt(elementClicked.id));
+        }
 
-});
+    });
+
+
+
+}
 
 
 
