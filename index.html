@@ -18,25 +18,25 @@
             <tr>
                 <td>
                     <div>
-                        <button class="buttons" onclick="handlers.toggleAll() "> Toggle All </button>
+                        <button id ="TogButton"class="buttons" onclick="handlers.toggleAll() "> Check/Uncheck All </button>
                     </div>
                 </td>
                 <td>
-                    <div>
-                        <button class="buttons" onclick="handlers.addTodo()">Add Todo</button>
+                    <div class="buttonContainer">
+                        <button id="addButton"  class="buttons" onclick="handlers.addTodo()">Add Todo</button>
                         <input id="addTodoTextInput" type="text">
                     </div>
                 </td>
                 <td>
-                    <div>
-                        <button class="buttons " onclick="handlers.changeTodo()">Change Todo</button>
+                    <div class="buttonContainer">
+                        <button id="changeButton" class="buttons " onclick="handlers.changeTodo()">Change Todo</button>
                         <input id="changeTodoPosition" type="number">
                         <input id="changeTodoText" type="text">
                     </div>
                 </td>
                 <td>
                     <div>
-                        <button class="buttons " onclick="handlers.toggleCompleted()">Toggle Todo</button>
+                        <button  id = "toggleButton"  onclick="handlers.toggleCompleted()"></button>
                         <input id="togglePosition" type="number">
                     </div>
                 </td>
